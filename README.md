@@ -1,2 +1,0 @@
-# DSAlgoLibrary-JayaChandra
-DSAlgoLibrary-JayaChandra
