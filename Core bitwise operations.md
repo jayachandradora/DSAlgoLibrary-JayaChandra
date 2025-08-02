@@ -232,16 +232,16 @@ Used in:
 
 ## ✅ Summary of Patterns
 
-| Task           | Pattern                  |            |
-| -------------- | ------------------------ | ---------- |
-| Check bit set  | `num & (1 << i)`         |            |
-| Set bit        | \`num                    | (1 << i)\` |
-| Clear bit      | `num & ~(1 << i)`        |            |
-| Toggle bit     | `num ^ (1 << i)`         |            |
-| Count bits     | `num & (num - 1)`        |            |
-| Power of 2     | `(num & (num - 1)) == 0` |            |
-| Unique element | `x ^ x = 0`              |            |
-| Isolate LSB    | `x & -x`                 |            |
+| Task           | Pattern                  |           
+| -------------- | ------------------------ |
+| Check bit set  | `num & (1 << i)`         |           
+| Set bit        | `num (1 << i)`           |
+| Clear bit      | `num & ~(1 << i)`        |           
+| Toggle bit     | `num ^ (1 << i)`         |           
+| Count bits     | `num & (num - 1)`        |            
+| Power of 2     | `(num & (num - 1)) == 0` |            
+| Unique element | `x ^ x = 0`              |            
+| Isolate LSB    | `x & -x`                 |            
 
 ---
 
