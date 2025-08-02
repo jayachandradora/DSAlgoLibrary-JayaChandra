@@ -235,7 +235,7 @@ Used in:
 | Task           | Pattern                  |           
 | -------------- | ------------------------ |
 | Check bit set  | `num & (1 << i)`         |           
-| Set bit        | `num (1 << i)`           |
+| Set bit        | `num`                    |
 | Clear bit      | `num & ~(1 << i)`        |           
 | Toggle bit     | `num ^ (1 << i)`         |           
 | Count bits     | `num & (num - 1)`        |            
