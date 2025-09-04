@@ -31,6 +31,7 @@ These build on basic recursion and introduce array manipulations and decision tr
 6. **Find the first and last occurrence of an element in an array**
 7. **Remove all occurrences of a character from a string**
 8. **Tower of Hanoi problem**
+9. **Minimum Falling Path Sum Leetcode 931** https://www.youtube.com/watch?v=EQC0ckOyEGs
 
 ---
 
