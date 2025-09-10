@@ -16,7 +16,7 @@ These problems focus on understanding the core concept of recursion.
 6. **Reverse a string**
 7. **Find the maximum/minimum in an array recursively**
 8. **Check if an array is sorted**
-9. **108. Convert Sorted Array to Binary Search Tree**
+9. **108. Convert Sorted Array to Binary Search Tree** https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/
 
 ---
 
