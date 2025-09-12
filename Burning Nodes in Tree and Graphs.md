@@ -111,7 +111,8 @@ public class BurnTree {
     public int amountOfTime(TreeNode root, int startVal) {
         // Step 1: Find target node
         TreeNode targetNode = findNode(root, startVal);
-        if (targetNode == null) return 0;
+        if (targetNode == null)
+          return 0;
 
         // Step 2: Build parent references
         Map<TreeNode, TreeNode> parentMap = mapParents(root, targetNode);
@@ -122,11 +123,14 @@ public class BurnTree {
 
     // Utility to find the node with given value
     private TreeNode findNode(TreeNode root, int val) {
-        if (root == null) return null;
-        if (root.val == val) return root;
+        if (root == null)
+          return null;
+        if (root.val == val)
+          return root;
 
         TreeNode left = findNode(root.left, val);
-        if (left != null) return left;
+        if (left != null)
+           return left;
 
         return findNode(root.right, val);
     }
