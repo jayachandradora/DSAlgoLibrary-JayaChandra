@@ -1,6 +1,6 @@
 # Tree Traversal Solution Patters
 
-Great question! Solving tree problems effectively often comes down to recognizing **common patterns**. Below is a comprehensive list of **tree problem-solving patterns**, each with a **short explanation** and a **Java code example**.
+Solving tree problems effectively often comes down to recognizing **common patterns**. Below is a comprehensive list of **tree problem-solving patterns**, each with a **short explanation** and a **Java code example**.
 
 ---
 
