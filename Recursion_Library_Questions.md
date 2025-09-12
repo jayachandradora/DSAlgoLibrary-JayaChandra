@@ -220,6 +220,179 @@ Find the `k-th` symbol in row `n`.
 ---
 
 
+Absolutely! Here's your **complete guide** to mastering **Recursion** — covering:
+
+* ✅ Core concepts
+* 🔁 Common **patterns**
+* 💡 Tips to avoid stack overflow & improve performance
+* 📚 Example problems with solutions
+* 🗓️ A focused **7-day study plan**
+
+---
+
+# 📚 Recursion: Patterns & Study Plan (FAANG-Oriented)
+
+---
+
+## 🧠 What is Recursion?
+
+Recursion is a programming technique where a function **calls itself** to solve a problem by breaking it into smaller subproblems. It’s a key concept behind many **divide & conquer**, **backtracking**, and **dynamic programming** problems.
+
+---
+
+## 🧩 Recursion Patterns
+
+| # | Pattern                                | Description                            | Example Problem                                                                             |
+| - | -------------------------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------- |
+| 1 | **Basic Recursion**                    | Solve by reducing input                | [Factorial, Fibonacci](https://leetcode.com/problems/fibonacci-number/)                     |
+| 2 | **Decision Tree (Choose/Not Choose)**  | Binary decisions at each step          | [Subsets (78)](https://leetcode.com/problems/subsets/)                                      |
+| 3 | **Backtracking**                       | Recursion + undo decision              | [Permutations (46)](https://leetcode.com/problems/permutations/)                            |
+| 4 | **Divide & Conquer**                   | Split problem into halves              | [Merge Sort, Quick Sort](https://leetcode.com/problems/sort-an-array/)                      |
+| 5 | **DFS/Binary Tree Recursion**          | Recursive tree traversal               | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) |
+| 6 | **Memoized Recursion (Top-down DP)**   | Cache subproblem results               | [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)                           |
+| 7 | **Recursive Linked List/Backtracking** | Use recursion to reverse or manipulate | [Reverse Linked List (206)](https://leetcode.com/problems/reverse-linked-list/)             |
+
+---
+
+## ✅ Key Recursive Templates (Java)
+
+---
+
+### 📌 Basic Recursion Template
+
+```java
+void recurse(args) {
+    if (base case) return;
+    recurse(smaller problem);
+}
+```
+
+---
+
+### 📌 Subset (Choose / Not Choose)
+
+```java
+void helper(int[] nums, int index, List<Integer> path) {
+    if (index == nums.length) {
+        result.add(new ArrayList<>(path));
+        return;
+    }
+    // Not choose
+    helper(nums, index + 1, path);
+
+    // Choose
+    path.add(nums[index]);
+    helper(nums, index + 1, path);
+    path.remove(path.size() - 1); // backtrack
+}
+```
+
+---
+
+## 🔁 Must-Know Recursion Problems by Pattern
+
+---
+
+### 1️⃣ Basic Recursion
+
+**Problem:** [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
+
+```java
+public int fib(int n) {
+    if (n <= 1) return n;
+    return fib(n - 1) + fib(n - 2);
+}
+```
+
+---
+
+### 2️⃣ Subsets / Power Set
+
+**Problem:** [78. Subsets](https://leetcode.com/problems/subsets/)
+
+---
+
+### 3️⃣ Permutations
+
+**Problem:** [46. Permutations](https://leetcode.com/problems/permutations/)
+
+---
+
+### 4️⃣ Tree Recursion
+
+**Problem:** [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+
+---
+
+### 5️⃣ Backtracking (N-Queens, Sudoku)
+
+**Problem:** [51. N-Queens](https://leetcode.com/problems/n-queens/)
+
+---
+
+### 6️⃣ Divide & Conquer
+
+**Problem:** [912. Sort an Array (Merge Sort)](https://leetcode.com/problems/sort-an-array/)
+
+---
+
+### 7️⃣ Memoized Recursion
+
+**Problem:** [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+
+---
+
+## 🛡️ Tips to Master Recursion
+
+| Tip                                      | Why It Helps                       |
+| ---------------------------------------- | ---------------------------------- |
+| Define a clear **base case**             | Prevents infinite loops            |
+| Reduce the problem size                  | Ensures progress toward base       |
+| Use **memoization** to optimize          | Avoids exponential time            |
+| Practice with tracing                    | Build confidence in call stack     |
+| Convert recursive → iterative (optional) | For performance/stack size control |
+
+---
+
+## 🗓️ 7-Day Recursion Study Plan
+
+| Day   | Focus                       | Practice Problems          |
+| ----- | --------------------------- | -------------------------- |
+| Day 1 | Basic Recursion & Fibonacci | 509, 1137                  |
+| Day 2 | Tree Recursion (DFS)        | 104, 226, 543              |
+| Day 3 | Subsets & Permutations      | 78, 90, 46                 |
+| Day 4 | Backtracking Basics         | 39, 40, 17                 |
+| Day 5 | Advanced Backtracking       | 51 (N-Queens), 37 (Sudoku) |
+| Day 6 | Divide & Conquer            | 912, 23                    |
+| Day 7 | Memoization & Optimization  | 70, 198, 322               |
+
+---
+
+## ⚔️ Interview-Ready Recursion Problems (Top Picks)
+
+| Problem                       | Category                    |
+| ----------------------------- | --------------------------- |
+| 46. Permutations              | Backtracking                |
+| 78. Subsets                   | Recursion Tree              |
+| 51. N-Queens                  | Advanced Backtracking       |
+| 104. Max Depth                | Tree DFS                    |
+| 70. Climbing Stairs           | Memoization                 |
+| 394. Decode String            | Recursive Stack Parsing     |
+| 206. Reverse Linked List      | Recursive List Manipulation |
+| 98. Validate BST              | Tree recursion              |
+| 124. Binary Tree Max Path Sum | Recursive State             |
+| 200. Number of Islands        | DFS Recursion               |
+
+---
+
+## 📘 Summary
+
+* Recursion = **base case** + **recurrence relation**
+* It's the foundation of **backtracking, tree traversal, and DP**
+* Train by practicing **patterned problems**
+* Start small → visualize call stack → optimize with memoization
+
+
 
 
 
