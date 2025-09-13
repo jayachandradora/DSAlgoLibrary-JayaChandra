@@ -19,7 +19,9 @@ Solving tree problems effectively often comes down to recognizing **common patte
 
 ```java
 void inorder(TreeNode root) {
-    if (root == null) return;
+    if (root == null)
+        return;
+
     inorder(root.left);
     System.out.print(root.val + " ");
     inorder(root.right);
@@ -38,7 +40,8 @@ void inorder(TreeNode root) {
 ```java
 List<List<Integer>> levelOrder(TreeNode root) {
     List<List<Integer>> result = new ArrayList<>();
-    if (root == null) return result;
+    if (root == null)
+        return result;
 
     Queue<TreeNode> queue = new LinkedList<>();
     queue.offer(root);
@@ -53,7 +56,6 @@ List<List<Integer>> levelOrder(TreeNode root) {
             if (node.left != null) queue.offer(node.left);
             if (node.right != null) queue.offer(node.right);
         }
-
         result.add(level);
     }
 
@@ -75,10 +77,14 @@ public boolean isBalanced(TreeNode root) {
 }
 
 private int check(TreeNode node) {
-    if (node == null) return 0;
+    if (node == null)
+         return 0;
+
     int left = check(node.left);
     int right = check(node.right);
-    if (left == -1 || right == -1 || Math.abs(left - right) > 1) return -1;
+    if (left == -1 || right == -1 || Math.abs(left - right) > 1)
+        return -1;
+
     return Math.max(left, right) + 1;
 }
 ```
@@ -93,7 +99,9 @@ private int check(TreeNode node) {
 
 ```java
 public int maxDepth(TreeNode root) {
-    if (root == null) return 0;
+    if (root == null)
+        return 0;
+
     return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
 }
 ```
@@ -108,12 +116,15 @@ public int maxDepth(TreeNode root) {
 
 ```java
 public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-    if (root == null || root == p || root == q) return root;
+    if (root == null || root == p || root == q)
+        return root;
 
     TreeNode left = lowestCommonAncestor(root.left, p, q);
     TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-    if (left != null && right != null) return root;
+    if (left != null && right != null)
+        return root;
+
     return left != null ? left : right;
 }
 ```
@@ -134,7 +145,8 @@ public List<String> binaryTreePaths(TreeNode root) {
 }
 
 private void buildPaths(TreeNode node, String path, List<String> result) {
-    if (node == null) return;
+    if (node == null)
+         return;
 
     path += node.val;
 
@@ -162,8 +174,11 @@ public boolean isValidBST(TreeNode root) {
 }
 
 private boolean isValid(TreeNode node, Integer min, Integer max) {
-    if (node == null) return true;
-    if ((min != null && node.val <= min) || (max != null && node.val >= max)) return false;
+    if (node == null)
+        return true;
+    if ((min != null && node.val <= min) || (max != null && node.val >= max))
+        return false;
+
     return isValid(node.left, min, node.val) && isValid(node.right, node.val, max);
 }
 ```
@@ -218,7 +233,9 @@ public List<Integer> inorderTraversal(TreeNode root) {
 ```java
 // Serialize
 public String serialize(TreeNode root) {
-    if (root == null) return "null,";
+    if (root == null)
+        return "null,";
+
     return root.val + "," + serialize(root.left) + serialize(root.right);
 }
 
