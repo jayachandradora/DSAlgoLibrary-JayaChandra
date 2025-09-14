@@ -371,7 +371,7 @@ This is ideal for **interview prep** or **strengthening your tree problem skills
 * [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
 * [700. Search in a BST](https://leetcode.com/problems/search-in-a-binary-search-tree/)
 * [701. Insert into a BST](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
-* [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-binary-search-tree/)
+* [450. Delete Node in a BST](https://leetcode.com/problems/delete-node-in-a-bst/description/)
 
 ---
 
