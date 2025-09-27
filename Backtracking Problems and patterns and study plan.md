@@ -138,7 +138,8 @@ private void backtrack(int start, String s, List<String> path, List<List<String>
 private boolean isPalindrome(String str) {
     int l = 0, r = str.length() - 1;
     while (l < r) {
-        if (str.charAt(l++) != str.charAt(r--)) return false;
+        if (str.charAt(l++) != str.charAt(r--))
+            return false;
     }
     return true;
 }
@@ -154,7 +155,9 @@ private boolean isPalindrome(String str) {
 public List<List<String>> solveNQueens(int n) {
     List<List<String>> res = new ArrayList<>();
     char[][] board = new char[n][n];
-    for (char[] row : board) Arrays.fill(row, '.');
+    for (char[] row : board) {
+        Arrays.fill(row, '.');
+    }
     backtrack(0, board, res);
     return res;
 }
@@ -162,7 +165,9 @@ public List<List<String>> solveNQueens(int n) {
 private void backtrack(int row, char[][] board, List<List<String>> res) {
     if (row == board.length) {
         List<String> config = new ArrayList<>();
-        for (char[] line : board) config.add(new String(line));
+        for (char[] line : board) {
+            config.add(new String(line));
+        }
         res.add(config);
         return;
     }
@@ -176,15 +181,18 @@ private void backtrack(int row, char[][] board, List<List<String>> res) {
 }
 
 private boolean isValid(char[][] board, int row, int col) {
-    for (int i = 0; i < row; i++)
-        if (board[i][col] == 'Q') return false;
-
-    for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--)
-        if (board[i][j] == 'Q') return false;
-
-    for (int i = row - 1, j = col + 1; i >= 0 && j < board.length; i--, j++)
-        if (board[i][j] == 'Q') return false;
-
+    for (int i = 0; i < row; i++) {
+        if (board[i][col] == 'Q')
+            return false;
+    }
+    for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
+        if (board[i][j] == 'Q')
+            return false;
+    }
+    for (int i = row - 1, j = col + 1; i >= 0 && j < board.length; i--, j++) {
+        if (board[i][j] == 'Q')
+            return false;
+    }
     return true;
 }
 ```
@@ -197,14 +205,19 @@ private boolean isValid(char[][] board, int row, int col) {
 
 ```java
 public boolean exist(char[][] board, String word) {
-    for (int i = 0; i < board.length; i++)
-        for (int j = 0; j < board[0].length; j++)
-            if (dfs(board, word, i, j, 0)) return true;
+    for (int i = 0; i < board.length; i++) {
+        for (int j = 0; j < board[0].length; j++) {
+            if (dfs(board, word, i, j, 0))
+                return true;
+        }
+    }
     return false;
 }
 
 private boolean dfs(char[][] board, String word, int i, int j, int idx) {
-    if (idx == word.length()) return true;
+    if (idx == word.length())
+        return true;
+
     if (i < 0 || j < 0 || i >= board.length || j >= board[0].length || board[i][j] != word.charAt(idx))
         return false;
 
@@ -239,7 +252,8 @@ private void backtrack(int start, int[] candidates, int target, List<Integer> pa
     }
 
     for (int i = start; i < candidates.length; i++) {
-        if (candidates[i] > target) continue;
+        if (candidates[i] > target)
+            continue;
         path.add(candidates[i]);
         backtrack(i, candidates, target - candidates[i], path, res); // i not i+1 (reuse allowed)
         path.remove(path.size() - 1);
